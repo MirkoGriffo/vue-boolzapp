@@ -7,8 +7,8 @@
     <title>Boolzap</title>
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+  
 
     <!-- Icone -->
     <link
@@ -35,6 +35,36 @@
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </section>
+        <section class="notifiche">
+            <div class="cerchio-bianco">
+                <i class="fas fa-bell-slash"></i>
+            </div>
+            <p>Ricevi notifiche di nuovi messaggi</p>
+            <p><a class="grey" href="#">Attiva notifiche desktop</a></p>
+
+        </section>
+        <section class="cerca">
+            <div class="bianco">
+            <i class="fas fa-search"></i>
+        </div>
+            <input type="text" placeholder="Cerca o inizia una nuova chat">
+
+
+        </section>
+        
+       <!-- Lista utenti con v-for -->
+
+       <div class="lista-utenti">
+        <ul>
+            <li v-for="contatti in yourPropNameHere">
+                
+                <img v-bind:src="'assets-boolzapp/img/avatar' + contatti.avatar + '.jpg'" /> 
+               
+                <div class="name">{{contatti.name}}</div>
+            </li>
+        </ul>
+       
+    </section>
       </aside>
 
       <!-- Main -->
@@ -44,7 +74,7 @@
           <div class="utente">
             <img src="assets-boolzapp/img/avatar_1.jpg" alt="" />
             <p class="utente-principale">Michele</p>
-            <p class="ultimo-accesso">Ultimo accesso oggi alle 10.35</p>
+            <p class="ultimo-accesso grey">Ultimo accesso oggi alle 10.35</p>
           </div>
           <div class="icone">
             <i class="fas fa-search"></i>
@@ -52,11 +82,24 @@
             <i class="fas fa-ellipsis-v"></i>
         </section>
 
-        <section class="content-main"></section>
-        <section class="content-footer"></section>
+        <section class="content-main">
+            <div class="messaggio inviato">
+                <p>Messaggio Inviato</p>
+                <p class="data-ora">10/01/2021 15:50:00</p>
+            </div>
+            <div class="messaggio ricevuto">
+                <p>Messaggio ricevuto</p>
+                <p class="data-ora">10/01/2021 15:50:00</p>
+            </div>
+        </section>
+        <section class="content-footer">
+            <i class="far fa-smile"></i>
+            <input type="text" placeholder="Scrivi un messaggio">
+            <i class="fas fa-microphone"></i>
+        </section>
       </main>
     </div>
     <!-- Javascript -->
-    <script src="js/script.js"></script>
+    <script src="js/contatti.js"></script>
   </body>
 </html>
