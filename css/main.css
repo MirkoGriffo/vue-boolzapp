@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Utility */
+.border-left {
+  border-left: 1px solid #bbbbbb;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #32a093 0%,
+    #32a093 15%,
+    #dee0da 15%,
+    #dee0da 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Layout */
+
+.container {
+  display: flex;
+  width: 80%;
+  min-width: 900px;
+  height: 95%;
+  background: white;
+}
+
+.side {
+  flex-basis: 35%;
+}
+
+main {
+  display: flex;
+  flex-basis: 65%;
+  background: #aaa;
+  flex-direction: column;
+}
+
+.content-header,
+.content-footer {
+  padding: 20px;
+  background-color: #ededed;
+  height: 70px;
+  width: 100%;
+}
+
+.content-main {
+  flex-grow: 1;
+  background-image: url(../assets-boolzapp/img/mine.jpg);
+}
+
+/* Utente */
+
+.utente {
+  height: 70px;
+  width: 300px;
+  position: relative;
+  bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: auto;
+  align-content: start;
+}
+
+.utente img {
+  width: 20%;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.utente .nome-utente {
+  margin-top: 25px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+/* Icone */
+
+.icone {
+  color: #bababa;
+  font-size: 23px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: start;
+  align-content: start;
+}
+
+.icone i {
+  flex: 0 0 auto;
+  margin: 15px;
+  position: relative;
+  bottom: 80px;
+}
+
+.utente-principale {
+  font-weight: 700;
+  margin-left: 20px;
+  position: relative;
+  top: 15px;
+  right: 4px;
+}
+
+.ultimo-accesso {
+  color: #8d9395;
+  font-weight: 400;
+  position: relative;
+  bottom: 30px;
+  left: 75px;
+}
