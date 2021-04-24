@@ -87,5 +87,12 @@ const app = new Vue({
                 ],
             },
         ],
+        indexUtente: 0,
+    },
+
+    methods: {
+        setUtente(index) {
+            this.indexUtente = index;
+        },
     }
 });

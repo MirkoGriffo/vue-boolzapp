@@ -162,7 +162,7 @@ main {
   align-content: start;
   height: 50px;
   background-color: #fbfbfd;
-  padding: 10px 40px;
+  padding: 10px;
 }
 
 .cerca i {
@@ -170,11 +170,9 @@ main {
 }
 
 .cerca input {
-  width: 385px;
+  width: 460px;
   height: 30px;
   border: white;
-  position: relative;
-  right: 20px;
   padding: 8px;
   border: 1px solid #ededed;
   border-left: none;
@@ -188,8 +186,7 @@ main {
   background-color: white;
   width: 70px;
   height: 30px;
-  position: relative;
-  right: 20px;
+
   border: 1px solid #ededed;
   padding: 5px 25px;
 }
@@ -242,7 +239,12 @@ main {
   align-items: center;
   align-content: center;
   padding: 15px;
+  width: 550px;
   border-bottom: 1px solid #f6f6f6;
+}
+
+.lista-utenti li.active {
+  background-color: #d9d9d9;
 }
 
 .lista-utenti li:last-child {

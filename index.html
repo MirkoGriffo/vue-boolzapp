@@ -56,7 +56,9 @@
 
        <div class="lista-utenti">
         <ul>
-            <li v-for="contatti in yourPropNameHere">
+            <li v-for="(contatti, index) in yourPropNameHere"
+            :class="{active : index == indexUtente}"
+            @click="setUtente(index)">
                 
                 <img v-bind:src="'assets-boolzapp/img/avatar' + contatti.avatar + '.jpg'" /> 
                
