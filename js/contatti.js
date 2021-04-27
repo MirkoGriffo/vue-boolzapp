@@ -2,7 +2,7 @@ const app = new Vue({
     el: "#app",
 
     data: {
-        yourPropNameHere: [
+        contact: [
             {
                 name: "Michele",
                 avatar: "_1",
@@ -93,6 +93,9 @@ const app = new Vue({
     methods: {
         setUtente(index) {
             this.indexUtente = index;
+
+
+
         },
     }
 });

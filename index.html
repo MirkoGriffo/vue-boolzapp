@@ -56,7 +56,7 @@
 
        <div class="lista-utenti">
         <ul>
-            <li v-for="(contatti, index) in yourPropNameHere"
+            <li v-for="(contatti, index) in contact"
             :class="{active : index == indexUtente}"
             @click="setUtente(index)">
                 
@@ -74,8 +74,8 @@
       <main>
         <section class="content-header border-left">
           <div class="utente">
-            <img src="assets-boolzapp/img/avatar_1.jpg" alt="" />
-            <p class="utente-principale">Michele</p>
+            <img :src="`assets-boolzapp/img/avatar${contact[indexUtente].avatar}.jpg`" alt="" />
+            <p class="utente-principale">{{contact[indexUtente].name}}</p>
             <p class="ultimo-accesso grey">Ultimo accesso oggi alle 10.35</p>
           </div>
           <div class="icone">
@@ -85,14 +85,14 @@
         </section>
 
         <section class="content-main">
-            <div class="messaggio inviato">
-                <p>Messaggio Inviato</p>
-                <p class="data-ora">10/01/2021 15:50:00</p>
+            <div class="messaggio sent"
+            v-for="message in contact[indexUtente].messages"
+            :class="message.status">
+           
+                <p>{{message.message}}</p>
+                <p class="data-ora">{{message.date}}</p>
             </div>
-            <div class="messaggio ricevuto">
-                <p>Messaggio ricevuto</p>
-                <p class="data-ora">10/01/2021 15:50:00</p>
-            </div>
+            
         </section>
         <section class="content-footer">
             <i class="far fa-smile"></i>
