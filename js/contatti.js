@@ -1,3 +1,9 @@
+// Day JS
+const dataOra = dayjs().format("DD/MM/YYYY HH:mm:ss");
+dayjs.extend(dayjs_plugin_customParseFormat);
+
+
+
 const app = new Vue({
     el: "#app",
 
@@ -88,11 +94,38 @@ const app = new Vue({
             },
         ],
         indexUtente: 0,
+        newMessage: "",
+        risposta: "Ok",
     },
 
     methods: {
         setUtente(index) {
             this.indexUtente = index;
+
+        },
+
+        addNewMessage() {
+
+            if (this.newMessage != "") {
+                this.contact[this.indexUtente].messages.push({
+                    date: dataOra,
+                    message: this.newMessage,
+                    status: "sent",
+                })
+                this.newMessage = "";
+
+                //risposta dopo 1 secondo
+
+                setTimeout(() => {
+                    this.contact[this.indexUtente].messages.push({
+                        date: dataOra,
+                        message: this.risposta,
+                        status: "received",
+                    })
+
+                }, 1000)
+            }
+
 
 
 

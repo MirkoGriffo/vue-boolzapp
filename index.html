@@ -26,8 +26,8 @@
       <aside class="side">
         <section class="content-header">
           <div class="utente">
-            <img src="assets-boolzapp/img/avatar_io.jpg" alt="" />
-            <p class="nome-utente">Nome Utente</p>
+           <img src="assets-boolzapp/img/avatar_8.jpg" alt="" />
+            <p class="nome-utente">Mirko Griffo</p>
           </div>
           <div class="icone">
             <i class="fas fa-circle-notch"></i>
@@ -88,19 +88,27 @@
             <div class="messaggio sent"
             v-for="message in contact[indexUtente].messages"
             :class="message.status">
-           
-                <p>{{message.message}}</p>
+          <p>{{message.message}}</p>
                 <p class="data-ora">{{message.date}}</p>
             </div>
             
         </section>
         <section class="content-footer">
             <i class="far fa-smile"></i>
-            <input type="text" placeholder="Scrivi un messaggio">
+            <input 
+            type="text" 
+            placeholder="Scrivi un messaggio"
+            v-model="newMessage"
+            @keyup.enter="addNewMessage"
+            >
+            
             <i class="fas fa-microphone"></i>
         </section>
       </main>
     </div>
+    <!-- Day JS -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/plugin/customParseFormat.js"></script>
     <!-- Javascript -->
     <script src="js/contatti.js"></script>
   </body>
