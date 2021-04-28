@@ -96,6 +96,7 @@ const app = new Vue({
         indexUtente: 0,
         newMessage: "",
         risposta: "Ok",
+        ricerca: "",
     },
 
     methods: {
@@ -125,10 +126,19 @@ const app = new Vue({
 
                 }, 1000)
             }
-
-
-
-
         },
-    }
+
+        search() {
+            this.contact.forEach(contatti => {
+                if (contatti.name.toLowerCase().includes(this.ricerca.toLowerCase())) {
+                    contatti.visible = true
+                } else {
+                    contatti.visible = false
+                }
+            });
+        }
+    },
+
+
+
 });

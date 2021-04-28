@@ -47,18 +47,22 @@
             <div class="bianco">
             <i class="fas fa-search"></i>
         </div>
-            <input type="text" placeholder="Cerca o inizia una nuova chat">
+            <input type="text" placeholder="Cerca o inizia una nuova chat"
+            v-model="ricerca"
+                @keyup="search"
+              >
 
 
         </section>
         
        <!-- Lista utenti con v-for -->
 
-       <div class="lista-utenti">
+     <section class="lista-utenti">
         <ul>
             <li v-for="(contatti, index) in contact"
             :class="{active : index == indexUtente}"
-            @click="setUtente(index)">
+            @click="setUtente(index)"
+            v-show="contatti.visible === true">
                 
                 <img v-bind:src="'assets-boolzapp/img/avatar' + contatti.avatar + '.jpg'" /> 
                
@@ -66,7 +70,7 @@
             </li>
         </ul>
        
-    </section>
+    </section>  
       </aside>
 
       <!-- Main -->

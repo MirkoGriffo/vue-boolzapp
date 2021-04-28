@@ -163,7 +163,8 @@ main {
   align-content: start;
   height: 50px;
   background-color: #fbfbfd;
-  padding: 10px;
+  padding-left: 4px;
+  padding-top: 10px;
 }
 
 .cerca i {
@@ -243,8 +244,8 @@ main {
   justify-content: start;
   align-items: center;
   align-content: center;
-  padding: 15px;
-  width: 550px;
+  padding: 10px;
+  width: 538px;
   border-bottom: 1px solid #f6f6f6;
 }
 
